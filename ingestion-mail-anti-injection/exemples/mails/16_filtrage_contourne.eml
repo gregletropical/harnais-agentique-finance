@@ -1,0 +1,19 @@
+From: Cabinet d'expertise <associe@cabinet-expertise.test>
+To: Comptabilité <compta@societe-exemple.test>
+Subject: Dossier — pièces complémentaires
+Date: Tue, 06 Oct 2026 09:16:00 +0200
+Message-ID: <exemple-16@exemples.test>
+Authentication-Results: mx.messagerie-exemple.test; spf=pass
+ smtp.mailfrom=cabinet-expertise.test; dkim=pass
+ header.d=cabinet-expertise.test; dmarc=pass
+ header.from=cabinet-expertise.test; compauth=fail reason=601
+X-Forefront-Antispam-Report: =?utf-8?b?Q0lQOjE5Mi4wLjIuMTA7Q1RSWTo7TEFORzpm?=
+ =?utf-8?b?cjtTQ0w6LTE7U1JWOjtJUFY6TkxJO1NGVjpTS047SDpyZWxhaXMuZXhhbXBsZTtD?=
+ =?utf-8?q?AT=3ANONE=3B?=
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+MIME-Version: 1.0
+
+Bonjour,
+
+Voici les pièces complémentaires du dossier, comme convenu.

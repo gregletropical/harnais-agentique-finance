@@ -1,0 +1,211 @@
+{
+  "description": "Taxonomie FERMÉE de toutes les sorties qui franchissent une frontière dans la chaîne. Publication des constantes du code ; tests/test_taxonomie.py vérifie que ce fichier et le code sont identiques. Aucune sortie hors de ces listes n'est acceptée : elle est rejetée avec un motif lui-même fermé.",
+  "lecteur_tri": {
+    "frontiere": "lecteur -> orchestrateur",
+    "champs": {
+      "categorie": [
+        "Personnel",
+        "Clients",
+        "Administratif",
+        "Projets",
+        "Fournisseurs",
+        "Newsletters",
+        "Indetermine"
+      ],
+      "attente_utilisateur": [
+        "aucune",
+        "information",
+        "reponse",
+        "action"
+      ],
+      "urgence": [
+        "basse",
+        "normale",
+        "haute"
+      ]
+    },
+    "motifs_rejet": [
+      "non_chaine",
+      "vide",
+      "trop_long",
+      "pas_un_objet_json",
+      "json_invalide",
+      "cle_dupliquee",
+      "champ_inconnu",
+      "champ_manquant",
+      "type_invalide",
+      "valeur_hors_enumeration",
+      "erreur_modele"
+    ],
+    "capacite_du_canal": "7 x 4 x 3 = 84 verdicts, environ 6,4 bits par message, aucun texte libre"
+  },
+  "lecteur_revue": {
+    "frontiere": "lecteur de revue -> orchestrateur",
+    "familles": [
+      "action_attendue",
+      "information_utile",
+      "redondant",
+      "partage_dossier",
+      "agenda",
+      "suspect"
+    ],
+    "themes_contexte": [
+      "personne",
+      "organisation",
+      "process",
+      "tiers",
+      "outil",
+      "calendrier",
+      "chiffre"
+    ],
+    "niveaux_risque": [
+      "aucun",
+      "faible",
+      "eleve"
+    ],
+    "indices_risque": [
+      "urgence",
+      "confidentialite",
+      "changement_rib",
+      "demande_paiement",
+      "pj_inattendue",
+      "lien_externe",
+      "instruction_a_l_ia",
+      "usurpation_possible",
+      "demande_donnees_sensibles"
+    ],
+    "motifs_rejet": [
+      "non_chaine",
+      "vide",
+      "trop_long",
+      "json_invalide",
+      "cle_dupliquee",
+      "hors_schema",
+      "erreur_modele"
+    ],
+    "champs_texte_bornes": {
+      "action.resume": 200,
+      "contexte[].fait": 250,
+      "implication_future.motif": 200
+    },
+    "motifs_refuses_dans_les_textes": [
+      "iban",
+      "url",
+      "courriel",
+      "consigne_ia"
+    ]
+  },
+  "signaux": {
+    "frontiere": "en-têtes -> orchestrateur",
+    "verdicts_dmarc": [
+      "pass",
+      "fail",
+      "none",
+      "neutral",
+      "softfail",
+      "temperror",
+      "permerror",
+      "absent"
+    ],
+    "drapeaux_non_confiance": [
+      "dmarc_non_pass",
+      "entete_auth_forge",
+      "filtrage_contourne",
+      "compauth_echec",
+      "categorie_antispam",
+      "domaine_non_ascii",
+      "nom_affiche_avec_adresse",
+      "expediteur_illisible"
+    ],
+    "modes": [
+      "normal",
+      "degrade"
+    ]
+  },
+  "anti_fraude": {
+    "anomalies": [
+      "domaine_sosie",
+      "iban_inconnu",
+      "iban_sans_partenaire",
+      "montant_hors_historique",
+      "facture_sans_commande",
+      "piece_jointe_deguisee"
+    ]
+  },
+  "pieces_jointes": {
+    "formats_attendus": [
+      ".txt",
+      ".csv"
+    ],
+    "motifs_non_extraction": [
+      "expediteur_non_authentifie",
+      "domaine_non_autorise",
+      "domaine_nouveau_a_presenter",
+      "format_non_attendu",
+      "type_reel_different",
+      "trop_volumineux",
+      "non_texte"
+    ]
+  },
+  "orchestrateur": {
+    "propositions_tri": [
+      "rien",
+      "libelle_automatique",
+      "a_valider"
+    ],
+    "decisions_revue": [
+      "revue_humaine",
+      "a_faire",
+      "garder",
+      "archiver"
+    ],
+    "motifs_revue": [
+      "traitement_degrade",
+      "anomalie_fraude",
+      "lecture_rejetee",
+      "lecture_suspecte",
+      "risque_eleve",
+      "action_attendue",
+      "sujet_protege",
+      "information"
+    ]
+  },
+  "regles_tri": {
+    "classes": [
+      "Clients",
+      "Administratif",
+      "Fournisseurs",
+      "Projets",
+      "Personnel",
+      "Newsletters",
+      "Notifications",
+      "Non-classe"
+    ],
+    "actions": [
+      "suspect",
+      "a_traiter",
+      "archivable",
+      "a_trier"
+    ],
+    "niveaux": [
+      "observee",
+      "proposee",
+      "automatique"
+    ],
+    "conditions": [
+      "dmarc",
+      "expediteur_connu",
+      "liste_diffusion",
+      "expediteur_noreply",
+      "domaine"
+    ]
+  },
+  "execution": {
+    "decisions_executables": [
+      "archiver",
+      "a_faire",
+      "garder",
+      "revue_humaine"
+    ]
+  }
+}

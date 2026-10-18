@@ -1,0 +1,6 @@
+/sortie/
+/prevol/
+__pycache__/
+.pytest_cache/
+.venv/
+uv.lock

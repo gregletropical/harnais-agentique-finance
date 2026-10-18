@@ -1,0 +1,67 @@
+{
+  "description": "Règles du tri du flux, évaluées dans l'ordre sur les métadonnées seules. Schéma validé par controles/regles_tri.py. Domaines fictifs (.test, .example). Dans le système réel, les règles de domaine sont générées depuis les libellés que l'utilisateur maintient déjà, puis éditées à la main ou par la boucle d'apprentissage.",
+  "version": 1,
+  "libelles": {
+    "suspect": "IA/Suspect",
+    "a_traiter": "IA/À traiter",
+    "archivable": "IA/Archivable",
+    "a_trier": "IA/À trier"
+  },
+  "regles": [
+    {
+      "id": "R01-dmarc-echec-cible-usurpation",
+      "niveau": "proposee",
+      "note": "DMARC en échec sur une cible classique d'usurpation (banque, administration, plateforme). Ces expéditeurs ont un DMARC propre : chez eux, un échec est un vrai signal. Viser TOUT échec DMARC produirait surtout des faux positifs : chez un expéditeur de masse, l'échec trahit le plus souvent une configuration négligée, pas une usurpation.",
+      "si": {
+        "dmarc": ["fail", "softfail", "none", "absent"],
+        "domaine": ["banque-exemple.test", "paiement-exemple.test", "gouv.fr", "urssaf.fr", "plateforme-cloud.test", "suite-bureautique.test"]
+      },
+      "alors": {"action": "suspect"}
+    },
+    {
+      "id": "R02-correspondant-connu",
+      "niveau": "proposee",
+      "note": "L'utilisateur a déjà écrit à cette adresse, ou le domaine est un tiers connu.",
+      "si": {"expediteur_connu": true},
+      "alors": {"action": "a_traiter"}
+    },
+    {
+      "id": "D-fournisseur-papeterie.test",
+      "niveau": "proposee",
+      "si": {"domaine": "fournisseur-papeterie.test"},
+      "alors": {"classe": "Fournisseurs"}
+    },
+    {
+      "id": "D-cabinet-expertise.test",
+      "niveau": "proposee",
+      "si": {"domaine": "cabinet-expertise.test"},
+      "alors": {"classe": "Clients"}
+    },
+    {
+      "id": "D-societe-exemple.test",
+      "niveau": "proposee",
+      "si": {"domaine": "societe-exemple.test"},
+      "alors": {"classe": "Clients"}
+    },
+    {
+      "id": "R10-liste-diffusion",
+      "niveau": "proposee",
+      "note": "En-tête List-Unsubscribe, List-Id ou Precedence bulk : envoi de masse.",
+      "si": {"liste_diffusion": true},
+      "alors": {"classe": "Notifications", "action": "archivable"}
+    },
+    {
+      "id": "R11-expediteur-noreply",
+      "niveau": "proposee",
+      "si": {"expediteur_noreply": true},
+      "alors": {"classe": "Notifications", "action": "archivable"}
+    },
+    {
+      "id": "R90-newsletter-connue-automatique",
+      "niveau": "automatique",
+      "note": "Seul niveau automatique admis : il exige DMARC pass ET un expéditeur connu, sinon le fichier entier est refusé.",
+      "si": {"dmarc": "pass", "expediteur_connu": true, "liste_diffusion": true},
+      "alors": {"action": "archivable"}
+    }
+  ]
+}

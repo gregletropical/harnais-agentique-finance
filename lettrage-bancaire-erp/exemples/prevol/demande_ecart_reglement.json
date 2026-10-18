@@ -1,0 +1,18 @@
+{
+ "_commentaire": "Opération légitime : après arbitrage, le trop-perçu de 12 € d'un client est passé en produit pour lettrer sa facture. Tous les contrôles bloquants passent.",
+ "societe": "SOCIETE A",
+ "societe_id": 1,
+ "type_geste": "Écart de règlement client",
+ "comptes": ["411000", "758000"],
+ "date": "2026-10-16",
+ "tiers": "THETA RETAIL",
+ "tiers_id": 107,
+ "ref": "ECART REGLEMENT FV-2026-00126",
+ "journal_id": 10,
+ "besoin_metier": "Solder la facture FV-2026-00126, réglée 12 € de trop, en constatant l'écart en produit divers (arbitrage de l'utilisateur : montant non remboursé).",
+ "lignes": [
+  {"compte": "411000", "libelle": "Écart de règlement FV-2026-00126", "debit": 12.00, "credit": 0},
+  {"compte": "758000", "libelle": "Écart de règlement FV-2026-00126", "debit": 0, "credit": 12.00}
+ ],
+ "lettrage_groupe_ids": [6101, 6102]
+}

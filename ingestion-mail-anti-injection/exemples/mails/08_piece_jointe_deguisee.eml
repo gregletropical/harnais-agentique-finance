@@ -1,0 +1,30 @@
+From: Service facturation <facturation@fournisseur-papeterie.test>
+To: Comptabilité <compta@societe-exemple.test>
+Subject: Relevé de compte
+Date: Tue, 06 Oct 2026 09:08:00 +0200
+Message-ID: <exemple-08@exemples.test>
+Authentication-Results: mx.messagerie-exemple.test; spf=pass
+ smtp.mailfrom=fournisseur-papeterie.test; dkim=pass
+ header.d=fournisseur-papeterie.test; dmarc=pass
+ header.from=fournisseur-papeterie.test
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="==limite-08-0=="
+
+--==limite-08-0==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Bonjour,
+
+Ci-joint le relevé.
+
+--==limite-08-0==
+Content-Type: text/plain
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="releve.txt"
+MIME-Version: 1.0
+
+UEsDBBQAAABhcmNoaXZlLWZhY3RpY2UUAAAAYXJjaGl2ZS1mYWN0aWNlFAAAAGFyY2hpdmUtZmFj
+dGljZRQAAABhcmNoaXZlLWZhY3RpY2U=
+
+--==limite-08-0==--

@@ -1,0 +1,3 @@
+periode,id_projet,delta_ca,delta_cout,forme,motif,decision
+2026-02,P103,-1500.00,0.00,annulation,"production de février annulée à la demande du suivi opérationnel, après la clôture de février",2026-03-06
+2026-03,P104,0.00,12.40,neutralisation,"neutralise la revalorisation de change non comptée par l'outil (cf. exceptions_totaux_outil.csv)",2026-04-01

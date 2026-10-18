@@ -1,0 +1,34 @@
+{
+ "_commentaire": "Grand livre 100 % fictif, au format de ce que l'adaptateur de pré-vol lit dans l'ERP en lecture seule.",
+ "societes": {
+  "1": {"nom": "SOCIETE A", "verrou": "2025-12-31", "verrou_dur": null, "exercice_en_cours": 2026}
+ },
+ "journaux": {
+  "10": {"nom": "OPERATIONS DIVERSES", "inalterable": false}
+ },
+ "plan_comptable": {
+  "411000": "Clients",
+  "401000": "Fournisseurs",
+  "758000": "Produits divers de gestion courante",
+  "658000": "Charges diverses de gestion courante",
+  "606400": "Fournitures administratives"
+ },
+ "ecritures": [
+  {"piece": "OD/2026/03/0004", "date": "2026-03-12", "societe_id": 1, "compte": "758000", "tiers": "OMEGA MEDIA", "tiers_id": 109, "debit": 0, "credit": 3.50, "lettrage": "", "auteur": "cabinet comptable (auteur d'origine du process)"},
+  {"piece": "OD/2026/03/0004", "date": "2026-03-12", "societe_id": 1, "compte": "411000", "tiers": "OMEGA MEDIA", "tiers_id": 109, "debit": 3.50, "credit": 0, "lettrage": "L0412", "auteur": "cabinet comptable (auteur d'origine du process)"},
+  {"piece": "OD/2026/06/0011", "date": "2026-06-30", "societe_id": 1, "compte": "758000", "tiers": "BETA CONSEIL", "tiers_id": 102, "debit": 0, "credit": 25.00, "lettrage": "", "auteur": "cabinet comptable (auteur d'origine du process)"},
+  {"piece": "OD/2026/06/0011", "date": "2026-06-30", "societe_id": 1, "compte": "411000", "tiers": "BETA CONSEIL", "tiers_id": 102, "debit": 25.00, "credit": 0, "lettrage": "L0688", "auteur": "cabinet comptable (auteur d'origine du process)"},
+  {"piece": "FV-2026-00126", "date": "2026-09-20", "societe_id": 1, "compte": "411000", "tiers": "THETA RETAIL", "tiers_id": 107, "debit": 1800.00, "credit": 0, "lettrage": "", "auteur": "facturation"},
+  {"piece": "BQ/2026/10/0317", "date": "2026-10-15", "societe_id": 1, "compte": "411000", "tiers": "THETA RETAIL", "tiers_id": 107, "debit": 0, "credit": 1812.00, "lettrage": "", "auteur": "rapprochement bancaire"},
+  {"piece": "FA-2025-1187", "date": "2025-11-30", "societe_id": 1, "compte": "606400", "tiers": "FOURNITURES BUREAU EXEMPLE", "tiers_id": 140, "debit": 450.00, "credit": 0, "lettrage": "", "auteur": "saisie fournisseurs"}
+ ],
+ "pieces": [
+  {"nom": "FV-2026-00126", "ref": "", "tiers_id": 107, "montant": 1800.00, "etat": "comptabilisée", "societe_id": 1},
+  {"nom": "FA-2025-1187", "ref": "FA-2025-1187", "tiers_id": 140, "montant": 450.00, "etat": "comptabilisée", "societe_id": 1}
+ ],
+ "lignes_ouvertes": {
+  "6101": -1812.00,
+  "6102": 1800.00,
+  "6201": -450.00
+ }
+}

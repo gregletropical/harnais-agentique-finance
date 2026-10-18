@@ -1,0 +1,20 @@
+From: Service facturation <facturation@fournisseur-papetrie.test>
+To: Comptabilité <compta@societe-exemple.test>
+Subject: Changement de coordonnées bancaires
+Date: Tue, 06 Oct 2026 09:10:00 +0200
+Message-ID: <exemple-10@exemples.test>
+Authentication-Results: mx.messagerie-exemple.test; spf=pass
+ smtp.mailfrom=fournisseur-papetrie.test; dkim=pass
+ header.d=fournisseur-papetrie.test; dmarc=pass
+ header.from=fournisseur-papetrie.test
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Bonjour,
+
+Suite =C3=A0 un changement de banque, merci de r=C3=A9gler d=C3=A9sormais nos=
+ factures sur le compte FR00 9999 8000 0200 0000 0000 002. La facture F-2026-=
+131 de 1 290,50 =E2=82=AC est =C3=A0 r=C3=A9gler sous 48 h.
+
+Cordialement

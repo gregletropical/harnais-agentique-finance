@@ -1,0 +1,38 @@
+{
+  "description": "Trois niveaux de droits par compte de messagerie : lecture, maintenance, plein. Un profil = un jeton = un niveau. Chargé par controles/controle_scopes.py. Les noms de scopes sont ceux des API Google Workspace (préfixe https://www.googleapis.com/auth/ omis) et Microsoft Graph.",
+  "niveaux": {
+    "lecture": {
+      "usage": "Défaut de toute lecture, simulation du tri, veilles automatiques.",
+      "chargeable_par_routine": true,
+      "google": ["gmail.readonly", "calendar.readonly", "drive.readonly", "spreadsheets.readonly", "tasks.readonly"],
+      "microsoft": ["User.Read", "offline_access", "Mail.Read", "Mail.Read.Shared", "Calendars.Read", "Tasks.Read"]
+    },
+    "maintenance": {
+      "usage": "Gestes additifs et réversibles : libellés, archivage, brouillons, événements. Ne peut rien partager ni rien envoyer par construction de la liste blanche du client. Seul niveau d'écriture qu'une routine peut charger.",
+      "chargeable_par_routine": true,
+      "google": ["gmail.modify", "gmail.labels", "calendar.events", "calendar.readonly", "tasks", "drive.readonly", "documents", "spreadsheets"],
+      "microsoft": ["User.Read", "offline_access", "Mail.ReadWrite", "Mail.Read.Shared", "Calendars.ReadWrite", "Tasks.ReadWrite"]
+    },
+    "plein": {
+      "usage": "Envoi, suppression (corbeille), partage. Uniquement en session, sur demande explicite de l'humain. Jamais copié sur un serveur, jamais chargé par une routine. Application distincte côté Microsoft.",
+      "chargeable_par_routine": false,
+      "google": ["gmail.modify", "gmail.labels", "gmail.send", "gmail.settings.basic", "calendar", "tasks", "drive", "documents", "spreadsheets"],
+      "microsoft": ["User.Read", "offline_access", "Mail.ReadWrite", "Mail.Send", "Calendars.ReadWrite", "Tasks.ReadWrite", "Files.ReadWrite"]
+    }
+  },
+  "scopes_jamais_demandes": {
+    "https://mail.google.com/": "Accès complet, y compris la suppression définitive sans corbeille. gmail.modify suffit à tout ce qui est réversible.",
+    "gmail.settings.sharing": "Permet de créer une adresse de transfert automatique : canal d'exfiltration permanent.",
+    "Mail.Send.Shared": "Envoi au nom d'une boîte partagée : engagement pris auprès de l'administrateur de la messagerie de ne jamais le demander.",
+    "MailboxSettings.ReadWrite": "Permet de poser une règle de transfert automatique : canal d'exfiltration permanent.",
+    "full_access_as_app": "Accès applicatif à toutes les boîtes du tenant, sans utilisateur.",
+    "Mail.ReadWrite.All": "Accès applicatif à toutes les boîtes du tenant."
+  },
+  "outils_interdits_hors_plein": "^(send|delete|forward|reply|move-to-deleted|create-forward|update-mailbox-settings)",
+  "regles_de_geste_du_niveau_plein": [
+    "Envoi seulement sur GO explicite, après brouillon montré en entier, jamais vers une adresse qui n'apparaît que dans le corps d'un mail.",
+    "Suppression = corbeille, jamais définitive ; en masse, après annonce du nombre et d'un échantillon.",
+    "Partage de fichier à des personnes nommées par défaut ; lien public seulement sur demande, avec expiration, tracé.",
+    "Jamais de transfert automatique vers une adresse externe sans demande explicite."
+  ]
+}

@@ -1,0 +1,9 @@
+# .gitattributes du vault — fusion « garder les deux côtés » sur les seuls fichiers APPEND-ONLY.
+#
+# merge=union est juste quand on ne fait qu'ajouter des lignes (deux ajouts survivent, dans l'ordre).
+# Sur une ligne MODIFIÉE des deux côtés (cocher la même tâche), il produit un doublon muet, sans conflit.
+# D'où la règle : journaux et fragments de log uniquement, JAMAIS un fichier porteur de lignes de tâches à 🆔.
+# commit_guard.py lit cet attribut : un fichier union touché par l'amont ne déclenche pas de refus de push.
+
+journal/*.md                     merge=union
+journal/*\ -\ log\ *.md          merge=union

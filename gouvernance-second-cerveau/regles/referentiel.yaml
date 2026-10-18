@@ -1,0 +1,183 @@
+# Référentiel du lint — les vocabulaires fermés et les paramètres des contrôles.
+#
+# Ce fichier est la DÉFINITION des règles ; `controles/lint_vault.py` en est le
+# MOTEUR. Le moteur ne connaît aucune valeur métier : tout ce qui est propre à
+# un référentiel (types, statuts, dossiers-frontières, plafonds) vit ici.
+#
+# Une exception, délibérée : le vocabulaire `sujet:` n'est PAS listé ici. Il se
+# lit dans le dossier `dossier_sujets` du vault (une note par sujet). Un sujet
+# EST une note : le panneau de backlinks de cette note est la liste vivante des
+# notes du thème, et il n'y a qu'une seule source de vérité.
+
+# --------------------------------------------------------------------------
+# type: — vocabulaire fermé. Un type par GESTE DE SAISIE.
+# Test de captation : un type doit être connaissable au moment où l'on ouvre
+# la note. Ce qui demande du recul est un `status`, une `peremption` ou une
+# property, jamais un type. Nommage : kebab-case, sans accent.
+# --------------------------------------------------------------------------
+types:
+  # Couche dynamique (10) — le flux du quotidien
+  - journal-daily
+  - journal-weekly
+  - log-meeting
+  - log-session
+  - draft-prompt
+  - expression-besoin
+  - projet-chantier
+  - synthese-restit
+  - wording
+  - fiche-lecture
+  # Couche statique (6) — le fond, durable
+  - moc
+  - documentation
+  - arbitrage
+  - valeur-okr
+  - souvenir
+  - personne
+  # Couche process (1)
+  - process
+
+# Anciens noms supprimés par une refonte : ERROR, avec la cible de migration.
+# Gardés pour que le lint dise vers quoi migrer si l'un d'eux réapparaît
+# (template obsolète, note recopiée, agent mal à jour).
+types_supprimes:
+  note: "draft-prompt / documentation selon le geste"
+  reference: "documentation ou fiche-lecture"
+  reflexion: "draft-prompt"
+  context: "moc (tête de dossier) ou reventilation"
+  tete-dossier: "moc (tête de dossier) ou reventilation"
+  meeting: "log-meeting"
+  projet: "projet-chantier"
+  person: "personne"
+  article: "fiche-lecture"
+
+# Types isolés à remapper : WARN et non ERROR — dette identifiée et planifiée,
+# pas une faute à corriger dans l'urgence.
+types_a_remapper:
+  resource: documentation
+  deliverable: documentation
+  infrastructure: moc
+  daily: journal-daily
+  weekly: journal-weekly
+
+# Types où `sujet:` n'a pas de sens (c'est la date ou la personne qui classe).
+types_sans_sujet: [journal-daily, journal-weekly, personne, log-session]
+
+# Types de journal : aucune tâche ouverte ne doit y vivre.
+types_journal: [journal-daily, journal-weekly]
+
+# Seul type accepté comme cible de `projet:` (règle binaire).
+types_hub: [projet-chantier]
+
+# --------------------------------------------------------------------------
+# status: — cycle de vie
+# --------------------------------------------------------------------------
+statuses: [incubation, slowburn, active, standby, done, avorte, archive]
+# Statuts « endormis » : la note sort du pilotage, ses constats deviennent de
+# la dette FROIDE (comptée à part, visible avec --froid). Mettre un chantier en
+# sommeil, c'est poser ce statut : une consigne dans le corps ne pilote rien.
+statuses_endormis: [standby, avorte, archive]
+
+# source: — auteur du corps. `human` = corps immuable pour l'agent.
+sources: [human, ai, mixte]
+
+# recurrence: — hubs récurrents uniquement
+recurrences: [hebdomadaire, mensuelle, trimestrielle, annuelle]
+
+# --------------------------------------------------------------------------
+# Tags — jamais saisis à la main, sauf ces cas fermés
+# --------------------------------------------------------------------------
+# Tags d'énergie : sur les lignes de tâches uniquement.
+tags_energie: [deep, creatif, admin]
+# Marqueurs de LIGNE (une property ne peut pas marquer une ligne).
+# `agent-autonome` marque une ligne écrite par l'agent du serveur, pas encore
+# reprise en session (transitoire).
+tags_ligne_autorises: ["journal/daily/win", "agent-autonome"]
+# Familles miroir générées depuis les properties : légitimes en frontmatter.
+familles_miroir: [folder, people, projet, journal]
+# Tags appartenant à un plugin (Tasks, suivi d'habitudes) : hors doctrine.
+tags_fonctionnels: [task, habits]
+
+# Clefs d'avant la refonte → ce qui les remplace.
+cles_obsoletes:
+  NoteType: type
+  NoteStatut: status
+  statut: status
+  creation: created
+  cree: created
+  lie: lien
+# Clefs dont le sort n'est pas encore arbitré (INFO). Vide en régime normal.
+cles_en_attente_arbitrage: {}
+
+# --------------------------------------------------------------------------
+# Paramètres des contrôles
+# --------------------------------------------------------------------------
+summary_mots_max: 50          # summary-trop-long
+summary_caracteres_min: 20    # summary-trop-court
+sujets_max: 3                 # sujet-trop-nombreux
+
+# focus: true = « ce qui se joue maintenant ». C'est le PLAFOND qui priorise,
+# pas la property : sans lui, `focus` redevient `active` en trois mois. Le
+# compte porte sur toutes les notes, y compris `done` : un focus oublié mange
+# une place et se fait remarquer (règle auto-nettoyante).
+focus_plafond: 3
+
+# actif-dormant : hub `active` non modifié depuis N jours (dernier commit git).
+# 30 et non 14 : une clôture mensuelle tomberait à tort. Jamais de bascule
+# automatique en `standby` — c'est un acte de priorisation.
+dormant_jours: 30
+
+# agents-md-taille : plafond en caractères du fichier d'instructions. Un
+# plafond déclaratif ne tient pas ; un plafond contrôlé, si. Abaissé à chaque
+# phase de refonte du fichier.
+agents_md_seuil: 58000
+
+# Doublons probables de tâches (similarité de Jaccard sur les mots).
+doublon_seuil: 0.5
+doublon_min_mots: 4
+
+# --------------------------------------------------------------------------
+# Dossiers — « le dossier ne classe pas, il cloisonne »
+# --------------------------------------------------------------------------
+# Frontière d'habilitation du vocabulaire `sujet:`.
+dossier_sujets: ressources/sujets
+
+# Profondeur du niveau frontière par dossier racine : `clients/<client>/` est
+# une frontière (un client lira un jour son dossier), donc profondeur 2.
+# Ailleurs, le dossier racine lui-même (1). Tout dossier plus profond doit
+# figurer dans `dossiers_autorises`, sinon INFO dossier-non-frontiere.
+profondeur_frontiere:
+  clients: 2
+# Stock toléré. Ne JAMAIS allonger cette liste au motif du volume : la réponse
+# au volume est la vue, pas l'arborescence.
+dossiers_autorises:
+  - ressources/sujets
+
+# Règle « aucune note orpheline » : périmètre soumis.
+perimetre_orphelines: ["clients/", "interne/", "journal/"]
+
+# Corpus importés en masse : tout y est rétrogradé d'un cran de sévérité.
+dossiers_basse_priorite: ["ressources/import_masse"]
+
+# Property `ref_externe:` — id entier du projet dans l'outil de suivi externe
+# d'un client (le suivi réel y vit, le hub garde la structure). Réservée aux
+# hubs des dossiers clients déclarés ici.
+dossiers_ref_externe: ["clients/client_a/"]
+
+# --------------------------------------------------------------------------
+# Callouts de dialogue (notes de cadrage)
+# --------------------------------------------------------------------------
+# `> [!todo] Réponse` = encart réservé à l'humain (INFO s'il est vide).
+# `> [!quote] <humain>` = commentaire de l'humain ; il appelle un
+# `> [!check] <reponse_agent>` imbriqué, sinon WARN quote-sans-reponse.
+nom_humain: Responsable
+reponse_agent: "Réponse agent"
+# Nom de la fiche de l'agent : ignoré dans la comparaison des doublons.
+nom_agent: Agent
+
+# --------------------------------------------------------------------------
+# Périmètre du scan
+# --------------------------------------------------------------------------
+dirs_ignores: [".git", ".obsidian", ".claude", ".opencode", "_attachments", "node_modules", ".scripts", ".vscode"]
+fichiers_ignores: ["CLAUDE.md", "AGENTS.md", "CHANGELOG.md", "README.md", "_system/Contexte Global.md"]
+dirs_templates: ["_templates"]

@@ -1,0 +1,4 @@
+type,valeur,motif,decision
+compte,604200,"abonnements d'hébergement : coût indirect, jamais saisi dans l'outil de gestion de projets",D1
+tiers,HEBERGEUR CLOUD SAS,"coût indirect hors outil de gestion de projets par construction",D1
+projet_interne,*,"les projets internes de frais généraux ne relèvent pas de la sous-traitance projet",D1

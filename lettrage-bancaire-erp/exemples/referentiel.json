@@ -1,0 +1,856 @@
+{
+ "_commentaire": "Référentiel comptable 100 % fictif, au format de ce que la routine lit dans l'ERP en lecture seule.",
+ "societes": [
+  {
+   "id": 1,
+   "nom": "SOCIETE A",
+   "verrou": "2025-12-31"
+  },
+  {
+   "id": 2,
+   "nom": "SOCIETE B",
+   "verrou": "2025-12-31"
+  }
+ ],
+ "journaux": [
+  {
+   "id": 1,
+   "nom": "BANQUE 1",
+   "societe_id": 1,
+   "derniere_synchro_utc": "2026-10-16 06:20:00"
+  },
+  {
+   "id": 2,
+   "nom": "BANQUE 2",
+   "societe_id": 2,
+   "derniere_synchro_utc": "2026-10-16 06:21:00"
+  },
+  {
+   "id": 3,
+   "nom": "BANQUE 3",
+   "societe_id": 2,
+   "derniere_synchro_utc": "2026-10-14 17:50:00"
+  }
+ ],
+ "tiers": [
+  {
+   "id": 101,
+   "nom": "ALPHA LOGICIELS"
+  },
+  {
+   "id": 102,
+   "nom": "BETA CONSEIL"
+  },
+  {
+   "id": 103,
+   "nom": "GAMMA INDUSTRIE"
+  },
+  {
+   "id": 104,
+   "nom": "DELTA SERVICES"
+  },
+  {
+   "id": 105,
+   "nom": "EPSILON DISTRIBUTION"
+  },
+  {
+   "id": 106,
+   "nom": "ETA EDITIONS"
+  },
+  {
+   "id": 107,
+   "nom": "THETA RETAIL"
+  },
+  {
+   "id": 108,
+   "nom": "ZETA HOLDING"
+  },
+  {
+   "id": 109,
+   "nom": "OMEGA MEDIA"
+  },
+  {
+   "id": 110,
+   "nom": "MU TECHNOLOGIES"
+  },
+  {
+   "id": 111,
+   "nom": "OMICRON SANTE"
+  },
+  {
+   "id": 112,
+   "nom": "RHO CONSEIL"
+  },
+  {
+   "id": 121,
+   "nom": "NU FOURNITURES"
+  },
+  {
+   "id": 122,
+   "nom": "XI SOFTWARE"
+  },
+  {
+   "id": 126,
+   "nom": "BANQUE PRINCIPALE EXEMPLE"
+  },
+  {
+   "id": 127,
+   "nom": "SIGMA CONSEIL"
+  },
+  {
+   "id": 128,
+   "nom": "SIGMA ETUDES"
+  },
+  {
+   "id": 129,
+   "nom": "HOLDING U.G. PARTICIPATIONS"
+  },
+  {
+   "id": 130,
+   "nom": "PI LOCATIONS"
+  },
+  {
+   "id": 901,
+   "nom": "HEBERGEUR CLOUD EXEMPLE"
+  },
+  {
+   "id": 902,
+   "nom": "FOURNISSEUR ENERGIE EXEMPLE"
+  },
+  {
+   "id": 131,
+   "nom": "SIGMA CONSEIL",
+   "archive_sans_piece": true
+  }
+ ],
+ "pieces": [
+  {
+   "id": 2001,
+   "nom": "FV-2026-00129",
+   "tiers_id": 101,
+   "societe_id": 1,
+   "residu": 3600.0,
+   "date": "2026-09-10",
+   "echeance": "2026-10-10",
+   "ref": "",
+   "aml_ids": [
+    5001
+   ]
+  },
+  {
+   "id": 2002,
+   "nom": "FV-2026-00131",
+   "tiers_id": 102,
+   "societe_id": 1,
+   "residu": 2520.0,
+   "date": "2026-09-15",
+   "echeance": "2026-10-15",
+   "ref": "",
+   "aml_ids": [
+    5002
+   ]
+  },
+  {
+   "id": 2003,
+   "nom": "FV-2026-00132",
+   "tiers_id": 102,
+   "societe_id": 1,
+   "residu": 2520.0,
+   "date": "2026-09-18",
+   "echeance": "2026-10-18",
+   "ref": "",
+   "aml_ids": [
+    5003
+   ]
+  },
+  {
+   "id": 2004,
+   "nom": "FV-2026-00128",
+   "tiers_id": 103,
+   "societe_id": 1,
+   "residu": 3750.0,
+   "date": "2026-09-05",
+   "echeance": null,
+   "ref": "",
+   "echeances": [
+    {
+     "id": 5004,
+     "residu": 1250.0,
+     "echeance": "2026-10-05"
+    },
+    {
+     "id": 5005,
+     "residu": 1250.0,
+     "echeance": "2026-11-05"
+    },
+    {
+     "id": 5006,
+     "residu": 1250.0,
+     "echeance": "2026-12-05"
+    }
+   ],
+   "aml_ids": [
+    5004,
+    5005,
+    5006
+   ]
+  },
+  {
+   "id": 2005,
+   "nom": "FV-2026-00121",
+   "tiers_id": 104,
+   "societe_id": 1,
+   "residu": 720.0,
+   "date": "2026-09-01",
+   "echeance": null,
+   "ref": "",
+   "aml_ids": [
+    5007
+   ]
+  },
+  {
+   "id": 2006,
+   "nom": "FV-2026-00123",
+   "tiers_id": 104,
+   "societe_id": 1,
+   "residu": 1440.0,
+   "date": "2026-09-01",
+   "echeance": null,
+   "ref": "",
+   "aml_ids": [
+    5008
+   ]
+  },
+  {
+   "id": 2007,
+   "nom": "FV-2026-00127",
+   "tiers_id": 104,
+   "societe_id": 1,
+   "residu": 990.0,
+   "date": "2026-09-01",
+   "echeance": null,
+   "ref": "",
+   "aml_ids": [
+    5009
+   ]
+  },
+  {
+   "id": 2008,
+   "nom": "FV-2026-00103",
+   "tiers_id": 105,
+   "societe_id": 1,
+   "residu": 1234.56,
+   "date": "2026-08-01",
+   "echeance": null,
+   "ref": "",
+   "aml_ids": [
+    5010
+   ]
+  },
+  {
+   "id": 2009,
+   "nom": "FV-2026-00104",
+   "tiers_id": 105,
+   "societe_id": 1,
+   "residu": 2345.67,
+   "date": "2026-08-02",
+   "echeance": null,
+   "ref": "",
+   "aml_ids": [
+    5011
+   ]
+  },
+  {
+   "id": 2010,
+   "nom": "FV-2026-00105",
+   "tiers_id": 105,
+   "societe_id": 1,
+   "residu": 3456.78,
+   "date": "2026-08-03",
+   "echeance": null,
+   "ref": "",
+   "aml_ids": [
+    5012
+   ]
+  },
+  {
+   "id": 2011,
+   "nom": "FV-2026-00106",
+   "tiers_id": 105,
+   "societe_id": 1,
+   "residu": 987.65,
+   "date": "2026-08-04",
+   "echeance": null,
+   "ref": "",
+   "aml_ids": [
+    5013
+   ]
+  },
+  {
+   "id": 2012,
+   "nom": "FV-2026-00107",
+   "tiers_id": 105,
+   "societe_id": 1,
+   "residu": 1876.54,
+   "date": "2026-08-05",
+   "echeance": null,
+   "ref": "",
+   "aml_ids": [
+    5014
+   ]
+  },
+  {
+   "id": 2013,
+   "nom": "FV-2026-00108",
+   "tiers_id": 105,
+   "societe_id": 1,
+   "residu": 765.43,
+   "date": "2026-08-06",
+   "echeance": null,
+   "ref": "",
+   "aml_ids": [
+    5015
+   ]
+  },
+  {
+   "id": 2014,
+   "nom": "FV-2026-00109",
+   "tiers_id": 105,
+   "societe_id": 1,
+   "residu": 2109.87,
+   "date": "2026-08-07",
+   "echeance": null,
+   "ref": "",
+   "aml_ids": [
+    5016
+   ]
+  },
+  {
+   "id": 2015,
+   "nom": "FV-2026-00110",
+   "tiers_id": 105,
+   "societe_id": 1,
+   "residu": 1543.21,
+   "date": "2026-08-08",
+   "echeance": null,
+   "ref": "",
+   "aml_ids": [
+    5017
+   ]
+  },
+  {
+   "id": 2016,
+   "nom": "FV-2026-00111",
+   "tiers_id": 105,
+   "societe_id": 1,
+   "residu": 2468.13,
+   "date": "2026-08-09",
+   "echeance": null,
+   "ref": "",
+   "aml_ids": [
+    5018
+   ]
+  },
+  {
+   "id": 2017,
+   "nom": "FV-2026-00112",
+   "tiers_id": 105,
+   "societe_id": 1,
+   "residu": 1357.92,
+   "date": "2026-08-10",
+   "echeance": null,
+   "ref": "",
+   "aml_ids": [
+    5019
+   ]
+  },
+  {
+   "id": 2018,
+   "nom": "FV-2026-00124",
+   "tiers_id": 106,
+   "societe_id": 1,
+   "residu": 2400.0,
+   "date": "2026-09-12",
+   "echeance": null,
+   "ref": "",
+   "aml_ids": [
+    5020
+   ]
+  },
+  {
+   "id": 2019,
+   "nom": "FV-2026-00126",
+   "tiers_id": 107,
+   "societe_id": 1,
+   "residu": 1800.0,
+   "date": "2026-09-20",
+   "echeance": null,
+   "ref": "",
+   "aml_ids": [
+    5021
+   ]
+  },
+  {
+   "id": 2020,
+   "nom": "FV-2026-00125",
+   "tiers_id": 109,
+   "societe_id": 1,
+   "residu": 640.0,
+   "date": "2026-09-19",
+   "echeance": null,
+   "ref": "",
+   "aml_ids": [
+    5022
+   ]
+  },
+  {
+   "id": 2021,
+   "nom": "FV-2026-00115",
+   "tiers_id": 110,
+   "societe_id": 1,
+   "residu": 500.0,
+   "date": "2026-08-28",
+   "echeance": null,
+   "ref": "",
+   "aml_ids": [
+    5023
+   ]
+  },
+  {
+   "id": 2022,
+   "nom": "FV-2026-00116",
+   "tiers_id": 110,
+   "societe_id": 1,
+   "residu": 1000.0,
+   "date": "2026-08-28",
+   "echeance": null,
+   "ref": "",
+   "aml_ids": [
+    5024
+   ]
+  },
+  {
+   "id": 2023,
+   "nom": "FV-2026-00117",
+   "tiers_id": 110,
+   "societe_id": 1,
+   "residu": 700.0,
+   "date": "2026-08-28",
+   "echeance": null,
+   "ref": "",
+   "aml_ids": [
+    5025
+   ]
+  },
+  {
+   "id": 2024,
+   "nom": "FV-2026-00118",
+   "tiers_id": 110,
+   "societe_id": 1,
+   "residu": 800.0,
+   "date": "2026-08-28",
+   "echeance": null,
+   "ref": "",
+   "aml_ids": [
+    5026
+   ]
+  },
+  {
+   "id": 2025,
+   "nom": "FV-2026-00113",
+   "tiers_id": 111,
+   "societe_id": 1,
+   "residu": 500.0,
+   "date": "2026-07-15",
+   "echeance": null,
+   "ref": "",
+   "aml_ids": [
+    5027
+   ]
+  },
+  {
+   "id": 2026,
+   "nom": "FV-2026-00114",
+   "tiers_id": 111,
+   "societe_id": 1,
+   "residu": 2000.0,
+   "date": "2026-08-15",
+   "echeance": null,
+   "ref": "",
+   "aml_ids": [
+    5028
+   ]
+  },
+  {
+   "id": 2027,
+   "nom": "FV-2026-00122",
+   "tiers_id": 111,
+   "societe_id": 1,
+   "residu": 900.0,
+   "date": "2026-09-15",
+   "echeance": null,
+   "ref": "",
+   "aml_ids": [
+    5029
+   ]
+  },
+  {
+   "id": 2028,
+   "nom": "FA-XI-2026-0311",
+   "tiers_id": 122,
+   "societe_id": 1,
+   "residu": -587.4,
+   "date": "2026-09-30",
+   "echeance": null,
+   "ref": "INV-90000045",
+   "aml_ids": [
+    5030
+   ]
+  },
+  {
+   "id": 2029,
+   "nom": "FA-XI-2026-0298",
+   "tiers_id": 122,
+   "societe_id": 1,
+   "residu": -1200.0,
+   "date": "2026-09-02",
+   "echeance": null,
+   "ref": "INV-90000087",
+   "aml_ids": [
+    5031
+   ]
+  },
+  {
+   "id": 2030,
+   "nom": "FV-2026-00120",
+   "tiers_id": 129,
+   "societe_id": 1,
+   "residu": 4800.0,
+   "date": "2026-09-08",
+   "echeance": null,
+   "ref": "",
+   "aml_ids": [
+    5032
+   ]
+  },
+  {
+   "id": 2031,
+   "nom": "FV-2025-00101",
+   "tiers_id": 112,
+   "societe_id": 1,
+   "residu": 700.0,
+   "date": "2025-12-01",
+   "echeance": null,
+   "ref": "",
+   "aml_ids": [
+    5033
+   ]
+  },
+  {
+   "id": 2032,
+   "nom": "FV-2026-00130",
+   "tiers_id": 130,
+   "societe_id": 1,
+   "residu": -1040.0,
+   "date": "2026-10-01",
+   "echeance": null,
+   "ref": "",
+   "aml_ids": [
+    5034
+   ]
+  }
+ ],
+ "factures_payees": [
+  {
+   "nom": "FA-NU-2026-0912",
+   "tiers_id": 121,
+   "societe_id": 1,
+   "montant": -356.4,
+   "date": "2026-10-01"
+  }
+ ],
+ "lots": [
+  {
+   "id": 7001,
+   "nom": "LOT/2026/0042",
+   "montant": -12480.35,
+   "journal_id": 1,
+   "etat": "envoye"
+  },
+  {
+   "id": 7002,
+   "nom": "LOT/2026/0039",
+   "montant": -8120.0,
+   "journal_id": 1,
+   "etat": "rapproche"
+  }
+ ],
+ "paiements_en_cours": [
+  {
+   "id": 5601,
+   "residu": -210.4,
+   "libelle": "NDF/2026/0412",
+   "date": "2026-10-13",
+   "journal_id": 1
+  },
+  {
+   "id": 5602,
+   "residu": -312.5,
+   "libelle": "NDF/2026/0413",
+   "date": "2026-10-13",
+   "journal_id": 1
+  },
+  {
+   "id": 5603,
+   "residu": -120.0,
+   "libelle": "NDF/2026/0414",
+   "date": "2026-10-14",
+   "journal_id": 1
+  },
+  {
+   "id": 5604,
+   "residu": -95.3,
+   "libelle": "NDF/2026/0415",
+   "date": "2026-10-14",
+   "journal_id": 1
+  },
+  {
+   "id": 5605,
+   "residu": -48.75,
+   "libelle": "NDF/2026/0416",
+   "date": "2026-10-12",
+   "journal_id": 1
+  },
+  {
+   "id": 5606,
+   "residu": -642.9,
+   "libelle": "NDF/2026/0380",
+   "date": "2026-09-25",
+   "journal_id": 1
+  }
+ ],
+ "lignes_ouvertes_tiers": [
+  {
+   "id": 5801,
+   "piece": "AV-2026-00031",
+   "residu": -480.0,
+   "tiers_id": 108,
+   "societe_id": 1
+  }
+ ],
+ "lignes_ouvertes_compte": [
+  {
+   "id": 5901,
+   "piece": "OD/2026/09/0007 (CA3 de septembre)",
+   "residu": -18245.0,
+   "compte": "445510",
+   "societe_id": 1
+  },
+  {
+   "id": 5902,
+   "piece": "OD/2026/08/0006 (CA3 d'août)",
+   "residu": -16980.0,
+   "compte": "445510",
+   "societe_id": 1
+  }
+ ],
+ "precedents_bancaires": [
+  {
+   "ligne_id": 801,
+   "libelle": "VIR SEPA RECU /FRM UPSILON GESTION /RNF PAIEMENT JUILLET",
+   "journal_id": 1,
+   "tiers_id": 129
+  },
+  {
+   "ligne_id": 802,
+   "libelle": "VIR SEPA RECU /FRM UPSILON GESTION /RNF PAIEMENT AOUT",
+   "journal_id": 1,
+   "tiers_id": 129
+  },
+  {
+   "ligne_id": 803,
+   "libelle": "VIR SEPA RECU /FRM UPSILON GESTION /RNF PAIEMENT SEPTEMBRE",
+   "journal_id": 1,
+   "tiers_id": 129
+  }
+ ],
+ "soldes": {
+  "1": [
+   {
+    "date": "2026-10-08",
+    "soldes_banque": [
+     152340.1
+    ],
+    "solde_erp": 152100.0
+   },
+   {
+    "date": "2026-10-09",
+    "soldes_banque": [
+     149870.55
+    ],
+    "solde_erp": 149500.0
+   },
+   {
+    "date": "2026-10-12",
+    "soldes_banque": [
+     161002.3
+    ],
+    "solde_erp": 160950.0
+   },
+   {
+    "date": "2026-10-13",
+    "soldes_banque": [
+     158440.0
+    ],
+    "solde_erp": 158390.2
+   },
+   {
+    "date": "2026-10-14",
+    "soldes_banque": [
+     155012.45
+    ],
+    "solde_erp": 155000.0
+   },
+   {
+    "date": "2026-10-15",
+    "soldes_banque": [
+     154800.0
+    ],
+    "solde_erp": 154655.1
+   }
+  ],
+  "2": [
+   {
+    "date": "2026-10-08",
+    "soldes_banque": [
+     48210.0
+    ],
+    "solde_erp": 48210.0
+   },
+   {
+    "date": "2026-10-09",
+    "soldes_banque": [
+     48210.0
+    ],
+    "solde_erp": 48210.0
+   },
+   {
+    "date": "2026-10-12",
+    "soldes_banque": [
+     48195.4
+    ],
+    "solde_erp": 48195.4
+   },
+   {
+    "date": "2026-10-13",
+    "soldes_banque": [
+     48195.4
+    ],
+    "solde_erp": 48195.4
+   },
+   {
+    "date": "2026-10-14",
+    "soldes_banque": [
+     48045.4
+    ],
+    "solde_erp": 47895.4
+   },
+   {
+    "date": "2026-10-15",
+    "soldes_banque": [
+     48026.8
+    ],
+    "solde_erp": 47876.8
+   }
+  ],
+  "3": [
+   {
+    "date": "2026-10-08",
+    "soldes_banque": [
+     402150.0
+    ],
+    "solde_erp": 402150.0
+   },
+   {
+    "date": "2026-10-09",
+    "soldes_banque": [
+     401030.0
+    ],
+    "solde_erp": 401030.0
+   },
+   {
+    "date": "2026-10-12",
+    "soldes_banque": [
+     401030.0
+    ],
+    "solde_erp": 401030.0
+   },
+   {
+    "date": "2026-10-13",
+    "soldes_banque": [
+     399910.0
+    ],
+    "solde_erp": 399910.0
+   },
+   {
+    "date": "2026-10-14",
+    "soldes_banque": [
+     399910.0
+    ],
+    "solde_erp": 399910.0
+   }
+  ]
+ },
+ "rapprochements_automatiques": [
+  {
+   "montant": 1200.0,
+   "debit": "512300",
+   "credit": "411000",
+   "partiel": false,
+   "pieces": "FV-2026-00119"
+  },
+  {
+   "montant": 96.0,
+   "debit": "445740",
+   "credit": "445740",
+   "partiel": false,
+   "pieces": "TVA/2026/0311"
+  },
+  {
+   "montant": 3400.0,
+   "debit": "416000",
+   "credit": "411000",
+   "partiel": false,
+   "pieces": "FV-2026-00102"
+  },
+  {
+   "montant": 850.0,
+   "debit": "401000",
+   "credit": "512300",
+   "partiel": true,
+   "pieces": "FA-2026-0877"
+  }
+ ],
+ "derive": [
+  {
+   "controle": "Avances non lettrées de plus de 45 jours (401/411)",
+   "veille": "12 lignes, 18 430,00 €",
+   "jour": "13 lignes, 19 105,00 €"
+  },
+  {
+   "controle": "467000 organismes sociaux, lignes non lettrées",
+   "veille": "8 lignes, 3 120,44 €",
+   "jour": "8 lignes, 3 120,44 €"
+  },
+  {
+   "controle": "445510 OD de TVA ouvertes",
+   "veille": "2",
+   "jour": "2"
+  },
+  {
+   "controle": "471000 compte d'attente de la banque",
+   "veille": "-2 310,45 €",
+   "jour": "-1 905,10 €"
+  }
+ ]
+}

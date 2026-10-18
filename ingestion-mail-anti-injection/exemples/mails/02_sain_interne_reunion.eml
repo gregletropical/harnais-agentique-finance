@@ -1,0 +1,18 @@
+From: Direction financière <direction@societe-exemple.test>
+To: Comptabilité <compta@societe-exemple.test>
+Subject: Ordre du jour — réunion de clôture
+Date: Tue, 06 Oct 2026 09:02:00 +0200
+Message-ID: <reunion-cloture@societe-exemple.test>
+Authentication-Results: mx.messagerie-exemple.test; spf=pass
+ smtp.mailfrom=societe-exemple.test; dkim=pass header.d=societe-exemple.test;
+ dmarc=pass header.from=societe-exemple.test
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Bonjour =C3=A0 tous,
+
+La r=C3=A9union de cl=C3=B4ture mensuelle se tiendra mardi =C3=A0 10 h. Merci=
+ de pr=C3=A9parer l'=C3=A9tat des rapprochements bancaires.
+
+Bonne journ=C3=A9e

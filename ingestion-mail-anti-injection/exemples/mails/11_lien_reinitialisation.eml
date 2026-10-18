@@ -1,0 +1,27 @@
+From: Sécurité du compte <securite@plateforme-cloud.test>
+To: Comptabilité <compta@societe-exemple.test>
+Subject: Réinitialisation de votre mot de passe
+Date: Tue, 06 Oct 2026 09:11:00 +0200
+Message-ID: <exemple-11@exemples.test>
+Authentication-Results: mx.messagerie-exemple.test; spf=softfail
+ smtp.mailfrom=plateforme-cloud.test; dkim=fail
+ header.d=plateforme-cloud.test; dmarc=fail header.from=plateforme-cloud.test
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="==limite-11-0=="
+
+--==limite-11-0==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Votre mot de passe expire aujourd'hui. R=C3=A9initialisez-le ici : https://pl=
+ateforme-cloud.test.evil.example/reset
+
+--==limite-11-0==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<p>Votre mot de passe expire aujourd'hui.</p><p><a href=3D"https://plateforme=
+-cloud.test.evil.example/reset">R=C3=A9initialiser</a></p>
+
+--==limite-11-0==--

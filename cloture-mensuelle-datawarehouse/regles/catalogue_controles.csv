@@ -1,0 +1,21 @@
+id,etape,nom,nature,module,ce_qui_bloque
+PF1,0 pré-vol,mois attendu,incoherence,controles/preflight.py,le mois demandé n'est pas le mois précédant la date du jour : présenté à l'humain qui tranche
+PF2,0 pré-vol,sources présentes,bloquant,controles/preflight.py,un fichier source attendu est absent ou vide
+PF3,0 pré-vol,couverture paie,bloquant,controles/preflight.py,le dépôt de paie ne couvre pas le mois P
+PF4,0 pré-vol,mois déjà chargé,incoherence,controles/preflight.py,le registre des chargements dit que P est déjà chargé : clôture faite ou à refaire ?
+CH1,1 chargement,cutoff contre totaux de l'outil,bloquant,controles/controle_totaux_outil.py,le total reconstitué d'une entité diffère du total de l'outil de plus de 1 EUR après retrait des exceptions du registre ; une exception périmée bloque aussi
+CH2,1 chargement,registre d'anomalies CRM,constat,controles/crm.py,une correction dont la source s'est corrigée entre-temps est signalée à repasser résolue
+GA1,2 garde,arbitrages MDM,bloquant,controles/mdm.py,une ligne prioritaire sans décision ou une décision prise mais non appliquée au référentiel
+PI1,3 pipeline,comptes orphelins de la taxonomie,bloquant,controles/pipeline.py,un compte de classe 6 ou 7 du grand livre n'a pas de poste P&L
+PI2,3 pipeline,dates inversées CRM,bloquant,controles/crm.py,un deal ouvert a une date de fin antérieure à sa date de début après application du registre
+PI3,3 pipeline,prévisionnel sur un mois clos,constat,controles/crm.py,un deal ouvert commence sur un mois déjà clos : son prévisionnel est décalé à P+1 (montant inchangé) et signalé
+CM1,4 contrôles du mois,cadrage ventes,constat + bloquant,controles/cadrage_ventes.py,pièces à instruire (constat) ; résidu inexpliqué du tableau de passage non nul (bloquant : le contrôle lui-même est faux)
+CM2,4 contrôles du mois,cadrage achats,constat + bloquant,controles/cadrage_achats.py,écritures à instruire (constat) ; résidu inexpliqué du tableau de passage non nul (bloquant)
+CM3,4 contrôles du mois,cadrage paie livre x journal PA,bloquant,controles/cadrage_paie.py,un compte en écart absent du registre d'exceptions (tolérance zéro)
+CM4,4 contrôles du mois,vraisemblance de la production,bloquant,controles/vraisemblance.py,CA ou MB du mois hors de [0.5 ; 2.0] fois la médiane des 12 mois précédents
+CM5,4 contrôles du mois,deals disparus du CRM,constat,controles/crm.py,un deal présent dans l'extraction précédente a disparu de la nouvelle
+FC1,5 fin de clôture,date de clôture,bloquant,controles/fin_de_cloture.py,la date de clôture du modèle n'est pas le dernier jour de P
+FC2,5 fin de clôture,couverture paie du modèle,bloquant,controles/fin_de_cloture.py,le mart de paie ne couvre pas P
+FC3,5 fin de clôture,production sans groupe client,bloquant,controles/mdm.py,un projet non interne avec production sur P n'a pas de groupe client
+FC4,5 fin de clôture,contrôles du mois calculés,bloquant,controles/fin_de_cloture.py,les contrôles du mois n'ont pas tourné sur P (ce n'est pas un zéro)
+FC5,5 fin de clôture,oracle M-1,bloquant,controles/recette.py,un mois passé a bougé par rapport à l'instantané de P-1 sans être qualifié au registre ; ou l'instantané manque

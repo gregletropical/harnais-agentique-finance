@@ -1,0 +1,14 @@
+[project]
+name = "ingestion-mail-anti-injection"
+version = "1.0.0"
+description = "Chaîne d'ingestion de mails pour agents IA : lecteur isolé, sorties à taxonomie fermée, gestes interdits, recette adverse."
+requires-python = ">=3.11"
+dependencies = []
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-p no:cacheprovider"

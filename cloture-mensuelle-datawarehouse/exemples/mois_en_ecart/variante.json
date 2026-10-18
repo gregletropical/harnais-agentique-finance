@@ -1,0 +1,10 @@
+{
+  "herite_de": "mois_conforme",
+  "ecarts_volontaires": [
+    "outil_projets/cutoff.csv et totaux_outil.csv : export du mois amputé (seuls P104 et un nouveau projet P106 portent de la production) ; les deux fichiers sont cohérents entre eux, seul le contrôle de vraisemblance peut le voir",
+    "outil_projets/projets.csv : P106, nouveau client CLIENT EPSILON jamais arbitré au référentiel (production sans groupe client)",
+    "compta/grand_livre.csv : charges URSSAF de mars passées 312,45 au-dessus du livre de paie sur 645100, écart absent du registre ; un achat payé en banque mais jamais comptabilisé ; une facture de vente absente du journal VT",
+    "outil_projets/achats.csv et factures.csv : l'achat payé non comptabilisé et la facture absente de la comptabilité",
+    "crm/deals.csv : le deal D-501 a disparu de l'extraction"
+  ]
+}

@@ -1,0 +1,7 @@
+prefixe_compte,poste_pnl,sous_poste
+706,01_Chiffre d'affaires,01_Prestations
+708,01_Chiffre d'affaires,02_Refacturations
+604,02_Coûts directs,01_Sous-traitance projets
+625,04_Frais généraux,01_Déplacements et réceptions
+641,03_Masse salariale,01_Salaires
+645,03_Masse salariale,02_Charges sociales

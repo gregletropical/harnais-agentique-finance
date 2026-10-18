@@ -1,0 +1,8 @@
+{
+  "nom": "plein-sur-serveur-m365",
+  "fournisseur": "microsoft",
+  "niveau": "plein",
+  "scopes": ["User.Read", "Mail.ReadWrite", "Mail.Send", "MailboxSettings.ReadWrite"],
+  "chargeable_par_routine": true,
+  "copie_sur_serveur": true
+}

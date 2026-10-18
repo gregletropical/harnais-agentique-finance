@@ -1,0 +1,274 @@
+{
+ "_commentaire": "Relevé bancaire 100 % fictif : libellés, tiers et montants inventés pour faire jouer chaque règle.",
+ "dernier_passage_utc": "2026-10-15 06:30:00",
+ "lignes": [
+  {
+   "id": 1,
+   "date": "2026-10-15",
+   "montant": 3600.0,
+   "libelle": "VIR SEPA RECU /FRM ALPHA LOGICIELS /RNF FV 00129",
+   "journal_id": 1,
+   "importee_le": "2026-10-16 06:21:00"
+  },
+  {
+   "id": 2,
+   "date": "2026-10-15",
+   "montant": 5040.0,
+   "libelle": "VIR SEPA RECU /FRM BETA CONSEIL /RNF FV 00131 FV 00132",
+   "journal_id": 1,
+   "importee_le": "2026-10-16 06:21:00"
+  },
+  {
+   "id": 3,
+   "date": "2026-10-15",
+   "montant": 1250.0,
+   "libelle": "VIR SEPA RECU /FRM GAMMA INDUSTRIE /RNF FV 00128",
+   "journal_id": 1,
+   "importee_le": "2026-10-16 06:21:00"
+  },
+  {
+   "id": 4,
+   "date": "2026-10-15",
+   "montant": 2160.0,
+   "libelle": "VIR SEPA RECU /FRM DELTA SERVICES /RNF REGLEMENT OCTOBRE",
+   "journal_id": 1,
+   "importee_le": "2026-10-16 06:21:00"
+  },
+  {
+   "id": 5,
+   "date": "2026-10-15",
+   "montant": 5455.77,
+   "libelle": "VIR SEPA RECU /FRM EPSILON DISTRIBUTION /RNF PAIEMENT FACTURES",
+   "journal_id": 1,
+   "importee_le": "2026-10-16 06:21:00"
+  },
+  {
+   "id": 6,
+   "date": "2026-10-15",
+   "montant": -12480.35,
+   "libelle": "VIR SEPA EMIS /PID LOT FOURNISSEURS 2026-10-A",
+   "journal_id": 1,
+   "importee_le": "2026-10-16 06:21:00"
+  },
+  {
+   "id": 7,
+   "date": "2026-10-15",
+   "montant": -642.9,
+   "libelle": "VIR SEPA EMIS /PID NOTES DE FRAIS 10-2026 /NBT 3",
+   "journal_id": 1,
+   "importee_le": "2026-10-16 06:21:00"
+  },
+  {
+   "id": 8,
+   "date": "2026-10-15",
+   "montant": -480.0,
+   "libelle": "VIR SEPA EMIS /PID ZETA HOLDING REMBOURSEMENT TROP PERCU",
+   "journal_id": 1,
+   "importee_le": "2026-10-16 06:21:00"
+  },
+  {
+   "id": 9,
+   "date": "2026-10-15",
+   "montant": 412.37,
+   "libelle": "VIR SEPA RECU /FRM CPAM DE LA REGION /RNF IJSS 092026",
+   "journal_id": 1,
+   "importee_le": "2026-10-16 06:21:00"
+  },
+  {
+   "id": 10,
+   "date": "2026-10-15",
+   "montant": -38.4,
+   "libelle": "COMMISSIONS FACTURE NUMERO 70004417",
+   "journal_id": 1,
+   "importee_le": "2026-10-16 06:21:00"
+  },
+  {
+   "id": 11,
+   "date": "2026-10-15",
+   "montant": -18245.0,
+   "libelle": "PRLV SEPA DGFIP LIB/TVA-092026-3310CA3",
+   "journal_id": 1,
+   "importee_le": "2026-10-16 06:21:00"
+  },
+  {
+   "id": 12,
+   "date": "2026-10-15",
+   "montant": -3412.18,
+   "libelle": "PRLV SEPA MUTUELLE PREVOYANCE EXEMPLE ECH/151026 ID EMETTEUR/FR00ZZZ999002",
+   "journal_id": 1,
+   "importee_le": "2026-10-16 06:21:00"
+  },
+  {
+   "id": 13,
+   "date": "2026-10-15",
+   "montant": -184320.55,
+   "libelle": "VIR SEPA EMIS /PID PAIE-202610 SALAIRES /NBT 062",
+   "journal_id": 1,
+   "importee_le": "2026-10-16 06:21:00"
+  },
+  {
+   "id": 14,
+   "date": "2026-10-14",
+   "montant": -265.1,
+   "libelle": "PRLV SEPA FOURNISSEUR ENERGIE EXEMPLE ECH/141026 ID EMETTEUR/FR00ZZZ999003",
+   "journal_id": 1,
+   "importee_le": "2026-10-16 06:21:00"
+  },
+  {
+   "id": 15,
+   "date": "2026-10-15",
+   "montant": -1120.0,
+   "libelle": "PRLV SEPA DGFIP LIB/TS-092026-0001",
+   "journal_id": 3,
+   "importee_le": "2026-10-16 06:21:00"
+  },
+  {
+   "id": 16,
+   "date": "2026-10-15",
+   "montant": 1000.0,
+   "libelle": "VIR SEPA RECU /FRM ETA EDITIONS /RNF FV 00124",
+   "journal_id": 1,
+   "importee_le": "2026-10-16 06:21:00"
+  },
+  {
+   "id": 17,
+   "date": "2026-10-15",
+   "montant": 1812.0,
+   "libelle": "VIR SEPA RECU /FRM THETA RETAIL /RNF FV 00126",
+   "journal_id": 1,
+   "importee_le": "2026-10-16 06:21:00"
+  },
+  {
+   "id": 18,
+   "date": "2026-10-15",
+   "montant": 950.0,
+   "libelle": "VIR SEPA RECU /FRM KAPPA INNOVATIONS SARL /RNF CONTRAT ANNUEL",
+   "journal_id": 1,
+   "importee_le": "2026-10-16 06:21:00"
+  },
+  {
+   "id": 19,
+   "date": "2026-10-15",
+   "montant": 640.0,
+   "libelle": "VIR SEPA RECU /FRM LAMBDA CONSULTING /RNF PRESTATION",
+   "journal_id": 1,
+   "importee_le": "2026-10-16 06:21:00"
+  },
+  {
+   "id": 20,
+   "date": "2026-10-15",
+   "montant": 1500.0,
+   "libelle": "VIR SEPA RECU /FRM MU TECHNOLOGIES /RNF REGLEMENT",
+   "journal_id": 1,
+   "importee_le": "2026-10-16 06:21:00"
+  },
+  {
+   "id": 21,
+   "date": "2026-10-15",
+   "montant": -356.4,
+   "libelle": "PRLV SEPA NU FOURNITURES ECH/151026 ID EMETTEUR/FR00ZZZ999001",
+   "journal_id": 1,
+   "importee_le": "2026-10-16 06:21:00"
+  },
+  {
+   "id": 22,
+   "date": "2026-10-15",
+   "montant": -587.4,
+   "libelle": "VIR SEPA EMIS /PID XI SOFTWARE - REF/FACTURE 90000123",
+   "journal_id": 1,
+   "importee_le": "2026-10-16 06:21:00"
+  },
+  {
+   "id": 23,
+   "date": "2026-10-15",
+   "montant": -62500.0,
+   "libelle": "ECHEANCE PRET MOYEN TERME T4 2026",
+   "journal_id": 3,
+   "importee_le": "2026-10-16 06:21:00"
+  },
+  {
+   "id": 24,
+   "date": "2026-10-15",
+   "montant": -15.0,
+   "libelle": "FRAIS DE TENUE DE COMPTE",
+   "journal_id": 1,
+   "importee_le": "2026-10-16 06:21:00",
+   "partenaire_id": 126
+  },
+  {
+   "id": 25,
+   "date": "2026-10-15",
+   "montant": 2340.0,
+   "libelle": "VIR SEPA RECU /FRM ASSUREUR PREVOYANCE EXEMPLE /RNF PREVOYANCE 092026",
+   "journal_id": 3,
+   "importee_le": "2026-10-16 06:21:00"
+  },
+  {
+   "id": 26,
+   "date": "2026-10-15",
+   "montant": 1500.0,
+   "libelle": "VIR SEPA RECU /FRM OMICRON SANTE /RNF ECHEANCIER 2/4 FACTURES 15/07+08",
+   "journal_id": 1,
+   "importee_le": "2026-10-16 06:21:00"
+  },
+  {
+   "id": 27,
+   "date": "2026-10-10",
+   "montant": -1040.0,
+   "libelle": "PRLV SEPA PI LOCATIONS ECH/101026",
+   "journal_id": 1,
+   "importee_le": "2026-10-10 06:20:00",
+   "contreparties_posees": [
+    "613200"
+   ]
+  },
+  {
+   "id": 28,
+   "date": "2025-12-30",
+   "montant": 700.0,
+   "libelle": "VIR SEPA RECU /FRM RHO CONSEIL /RNF FV 00101",
+   "journal_id": 1,
+   "importee_le": "2026-01-05 06:20:00"
+  },
+  {
+   "id": 29,
+   "date": "2026-10-14",
+   "montant": -150.0,
+   "libelle": "SOUSCRIPTION TITRES BANQUE",
+   "journal_id": 2,
+   "importee_le": "2026-10-16 06:21:00"
+  },
+  {
+   "id": 30,
+   "date": "2026-10-15",
+   "montant": -18.6,
+   "libelle": "* 0000042 OPE RLV COMPTE",
+   "journal_id": 2,
+   "importee_le": "2026-10-16 06:21:00"
+  },
+  {
+   "id": 31,
+   "date": "2026-10-12",
+   "montant": 300.0,
+   "libelle": "VIR SEPA RECU /FRM SIGMA /RNF ACOMPTE ETUDE",
+   "journal_id": 1,
+   "importee_le": "2026-10-12 06:20:00"
+  },
+  {
+   "id": 32,
+   "date": "2026-10-15",
+   "montant": 820.0,
+   "libelle": "VIR SEPA RECU /FRM ASSUREUR DOMMAGES EXEMPLE /RNF REMBOURSEMENT SINISTRE",
+   "journal_id": 1,
+   "importee_le": "2026-10-16 06:21:00"
+  },
+  {
+   "id": 33,
+   "date": "2026-10-15",
+   "montant": 4800.0,
+   "libelle": "VIR SEPA RECU /FRM UPSILON GESTION /RNF PAIEMENT OCTOBRE",
+   "journal_id": 1,
+   "importee_le": "2026-10-16 06:21:00"
+  }
+ ]
+}

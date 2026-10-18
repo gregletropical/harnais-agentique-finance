@@ -1,0 +1,10 @@
+{
+  "commentaire": "Profil fictif. Les champs chargeable_par_routine et copie_sur_serveur sont des paramètres d'exemple qui servent à démontrer la règle S4 ; ils ne décrivent aucune installation réelle.",
+  "nom": "boite-service-maintenance-m365",
+  "fournisseur": "microsoft",
+  "niveau": "maintenance",
+  "scopes": ["User.Read", "offline_access", "Mail.ReadWrite", "Mail.Read.Shared", "Calendars.ReadWrite"],
+  "outils": ["list-mail-messages", "get-mail-message", "list-mail-folders", "move-mail-message", "update-mail-message", "create-draft-email", "list-shared-mailbox-messages", "get-calendar-event", "create-calendar-event"],
+  "chargeable_par_routine": true,
+  "copie_sur_serveur": false
+}

@@ -1,0 +1,7 @@
+id_projet,libelle,client,interne,entite
+P101,Refonte boutique,CLIENT ALPHA,0,PRINCIPALE
+P102,Maintenance plateforme,CLIENT ALPHA,0,PRINCIPALE
+P103,Campagne acquisition,CLIENT BETA,0,PRINCIPALE
+P104,Migration catalogue,CLIENT GAMMA,0,PRINCIPALE
+P105,Audit performance,CLIENT DELTA,0,PRINCIPALE
+P900,Interne - avant-vente,,1,PRINCIPALE

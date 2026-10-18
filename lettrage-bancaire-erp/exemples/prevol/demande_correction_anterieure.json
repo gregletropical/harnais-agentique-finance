@@ -1,0 +1,18 @@
+{
+ "_commentaire": "Opération volontairement fautive : date sur l'exercice clos, écriture déséquilibrée, pièce déjà saisie, lettrage qui ne solde pas, aucun précédent. Le pré-vol doit tout bloquer.",
+ "societe": "SOCIETE A",
+ "societe_id": 1,
+ "type_geste": "Correction d'imputation fournisseur",
+ "comptes": ["606400", "401000"],
+ "date": "2025-11-30",
+ "tiers": "FOURNITURES BUREAU EXEMPLE",
+ "tiers_id": 140,
+ "ref": "FA-2025-1187",
+ "montant": 450.00,
+ "journal_id": 10,
+ "lignes": [
+  {"compte": "606400", "libelle": "Fournitures FA-2025-1187", "debit": 450.00, "credit": 0},
+  {"compte": "401000", "libelle": "Fournitures FA-2025-1187", "debit": 0, "credit": 445.50}
+ ],
+ "lettrage_groupe_ids": [6201]
+}

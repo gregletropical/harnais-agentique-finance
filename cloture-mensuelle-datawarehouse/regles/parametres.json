@@ -1,0 +1,32 @@
+{
+  "_doc": "Paramètres des contrôles de clôture. Les tolérances sont des seuils d'arrondi technique, jamais des seuils de matérialité : tout écart au-delà doit être expliqué, pas absorbé (tolérance zéro sur le fond).",
+  "tolerance_ventes_eur": 0.05,
+  "tolerance_achats_eur": 0.02,
+  "tolerance_paie_eur": 0.0,
+  "tolerance_cutoff_entite_periode_eur": 1.0,
+  "tolerance_arrondi_recette_eur": 0.02,
+  "vraisemblance": {
+    "mois_historique": 12,
+    "ratio_min": 0.5,
+    "ratio_max": 2.0,
+    "mesures": ["ca", "mb"]
+  },
+  "achats": {
+    "ecart_relatif_bon_commande": 0.05,
+    "ecart_relatif_tiers_montant": 0.03,
+    "jours_max_tiers_montant": 45,
+    "longueur_min_numero_facture": 5
+  },
+  "comptes": {
+    "ventes_ht": "70",
+    "ventes_tva": "4457",
+    "clients": "411",
+    "achats_perimetre": "604",
+    "fournisseurs": "401",
+    "journaux_ventes": ["VT"],
+    "journaux_achats": ["HA"],
+    "journaux_banque": ["BQ"],
+    "journal_paie": "PA"
+  },
+  "mois_recouvrement_delta": 2
+}

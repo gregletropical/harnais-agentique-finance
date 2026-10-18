@@ -1,0 +1,9 @@
+{
+  "nom": "lecture-avec-outils-d-envoi",
+  "fournisseur": "microsoft",
+  "niveau": "lecture",
+  "scopes": ["User.Read", "Mail.Read", "Mail.ReadWrite"],
+  "outils": ["list-mail-messages", "send-mail", "delete-mail-message", "forward-mail-message"],
+  "chargeable_par_routine": true,
+  "copie_sur_serveur": false
+}

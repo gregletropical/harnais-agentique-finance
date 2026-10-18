@@ -1,0 +1,24 @@
+{
+  "description": "Configuration d'une boîte FICTIVE. Tous les domaines sont réservés (.test, .example), tous les IBAN sont inventés (clé de contrôle 00 invalide, banque 99999 inexistante), tous les montants sont inventés. Dans le système réel, les tiers connus, leurs comptes bancaires et l'historique des montants viennent de l'ERP.",
+  "domaine_interne": "societe-exemple.test",
+  "serveur_auth_de_confiance": "mx.messagerie-exemple.test",
+  "boite_partagee": false,
+  "tiers_connus": {
+    "fournisseur-papeterie.test": {
+      "libelle": "FOURNISSEUR PAPETERIE EXEMPLE",
+      "ibans": ["FR00 9999 9000 0100 0000 0000 001"],
+      "montants_historiques": [312.40, 845.00, 1290.50],
+      "commandes_ouvertes": ["BC-2026-0412"]
+    },
+    "cabinet-expertise.test": {
+      "libelle": "CABINET D'EXPERTISE EXEMPLE",
+      "ibans": [],
+      "montants_historiques": [2400.00],
+      "commandes_ouvertes": []
+    }
+  },
+  "correspondants_connus": ["contact@association-exemple.test"],
+  "pj_domaines_autorises": ["fournisseur-papeterie.test", "societe-exemple.test", "cabinet-expertise.test"],
+  "pj_domaines_refuses": ["evil.example"],
+  "sujets_proteges": ["Projet Orion"]
+}

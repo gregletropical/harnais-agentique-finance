@@ -1,0 +1,8 @@
+{
+  "nom": "profil-trop-large",
+  "fournisseur": "google",
+  "niveau": "maintenance",
+  "scopes": ["https://mail.google.com/", "gmail.modify", "gmail.send", "gmail.settings.sharing"],
+  "chargeable_par_routine": true,
+  "copie_sur_serveur": true
+}

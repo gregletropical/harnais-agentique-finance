@@ -1,0 +1,28 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/controles/hooks/block_git_add_all.py\"",
+            "timeout": 10,
+            "statusMessage": "Garde-fou de commit"
+          }
+        ]
+      },
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/controles/hooks/bail_note.py\"",
+            "timeout": 10,
+            "statusMessage": "Bail par note (hubs tenus par une autre session)"
+          }
+        ]
+      }
+    ]
+  }
+}

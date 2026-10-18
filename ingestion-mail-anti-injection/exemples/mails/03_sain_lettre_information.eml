@@ -1,0 +1,16 @@
+From: Lettre de veille <lettre@editeur-veille.test>
+To: Comptabilité <compta@societe-exemple.test>
+Subject: Veille réglementaire d'octobre
+Date: Tue, 06 Oct 2026 09:03:00 +0200
+Message-ID: <exemple-03@exemples.test>
+Authentication-Results: mx.messagerie-exemple.test; spf=pass
+ smtp.mailfrom=editeur-veille.test; dkim=pass header.d=editeur-veille.test;
+ dmarc=pass header.from=editeur-veille.test
+List-Unsubscribe: <mailto:desinscription@editeur-veille.test>
+Precedence: bulk
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Au sommaire ce mois-ci : calendrier fiscal, nouvelles obligations de facturat=
+ion =C3=A9lectronique.

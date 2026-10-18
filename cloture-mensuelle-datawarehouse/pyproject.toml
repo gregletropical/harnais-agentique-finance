@@ -1,0 +1,13 @@
+[project]
+name = "cloture-mensuelle-datawarehouse"
+version = "0.1.0"
+description = "Clôture mensuelle d'un entrepôt de données finance pilotée par un agent : pipeline réduit, contrôles de cadrage et contrôle de fin de clôture, sur exemples synthétiques"
+requires-python = ">=3.11"
+dependencies = []   # bibliothèque standard seule (sqlite3, csv, json)
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

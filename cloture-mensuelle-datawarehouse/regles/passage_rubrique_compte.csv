@@ -1,0 +1,5 @@
+rubrique,compte,libelle
+SALAIRE_BASE,641100,Salaire de base
+URSSAF_PATRONALE,645100,Cotisations URSSAF part patronale
+MUTUELLE_PATRONALE,645200,Mutuelle part patronale
+RETRAITE_PATRONALE,645300,Retraite complémentaire part patronale

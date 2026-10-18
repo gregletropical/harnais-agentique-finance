@@ -1,0 +1,3 @@
+id_deal,champ,valeur_source,valeur_corrigee,motif,statut,date_detection,date_signalement,canal,date_resolution
+D-504,fin,2026-03-31,2027-03-31,"année de fin saisie en 2026 au lieu de 2027 (fin antérieure au début) ; signalée au propriétaire du deal",ouvert,2026-03-02,2026-03-02,messagerie,
+D-505,fin,2025-12-31,2026-12-31,"année de fin erronée, signalée le mois dernier",ouvert,2026-02-02,2026-02-02,messagerie,

@@ -1,0 +1,29 @@
+{
+  "description": "Gestes interdits et liste blanche du client de messagerie du pipeline. Source de vérité chargée par controles/client_messagerie.py et controles/controle_gestes.py. Une méthode absente de la liste blanche est refusée AVANT tout appel.",
+  "trois_interdits": [
+    "Aucune ouverture de lien ou de ressource distante référencée dans un message.",
+    "Aucun envoi automatique : toute sortie rédigée reste un brouillon soumis à validation humaine.",
+    "Aucune suppression : les gestes admis sont additifs et réversibles (libeller, archiver)."
+  ],
+  "methodes_autorisees": [
+    ["messages", "list"],
+    ["messages", "get"],
+    ["labels", "list"],
+    ["labels", "create"],
+    ["messages", "modify"]
+  ],
+  "methodes_ecriture": [
+    ["labels", "create"],
+    ["messages", "modify"]
+  ],
+  "verbes_interdits": ["send", "delete", "trash", "batchDelete", "untrash", "insert", "import", "forward", "reply", "createForwardingAddress", "updateAutoForwarding"],
+  "libelles_systeme_interdits_en_ajout": ["TRASH", "SPAM"],
+  "lecture_forcee_en_metadonnees": {
+    "methode": ["messages", "get"],
+    "format": "metadata",
+    "champs": ["id", "labelIds", "headers"]
+  },
+  "niveaux_utilisables_par_le_pipeline": ["lecture", "maintenance"],
+  "imports_interdits_pipeline": ["socket", "http", "urllib", "requests", "httpx", "aiohttp", "smtplib", "imaplib", "poplib", "ftplib", "telnetlib", "webbrowser", "subprocess", "ctypes", "multiprocessing"],
+  "imports_autorises_lecteurs": ["__future__", "json", "re", "secrets", "unicodedata", "dataclasses", "typing", "controles", "lecteur"]
+}

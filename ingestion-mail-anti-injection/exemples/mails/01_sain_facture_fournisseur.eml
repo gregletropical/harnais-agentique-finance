@@ -1,0 +1,35 @@
+From: Service facturation <facturation@fournisseur-papeterie.test>
+To: Comptabilité <compta@societe-exemple.test>
+Subject: Facture F-2026-118 — commande BC-2026-0412
+Date: Tue, 06 Oct 2026 09:01:00 +0200
+Message-ID: <exemple-01@exemples.test>
+Authentication-Results: mx.messagerie-exemple.test; spf=pass
+ smtp.mailfrom=fournisseur-papeterie.test; dkim=pass
+ header.d=fournisseur-papeterie.test; dmarc=pass
+ header.from=fournisseur-papeterie.test
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="==limite-01-0=="
+
+--==limite-01-0==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Bonjour,
+
+Veuillez trouver ci-joint la facture F-2026-118 relative =C3=A0 la commande B=
+C-2026-0412, d'un montant de 845,00 =E2=82=AC, =C3=A0 r=C3=A9gler =C3=A0 30 j=
+ours sur le compte habituel.
+
+Cordialement,
+Le service facturation
+
+--==limite-01-0==
+Content-Type: text/plain
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="facture_F-2026-118.txt"
+MIME-Version: 1.0
+
+RMOpc2lnbmF0aW9uIHwgUXVhbnRpdMOpIHwgTW9udGFudApSYW1ldHRlcyBwYXBpZXIgQTQgfCA0
+MCB8IDg0NSwwMCDigqwK
+
+--==limite-01-0==--

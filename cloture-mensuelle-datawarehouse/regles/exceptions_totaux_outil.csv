@@ -1,0 +1,2 @@
+periode,entite,id_projet,ecart_mb,cause,date
+2026-03,PRINCIPALE,P104,12.40,"revalorisation de change d'un projet en devise terminé mais non clôturé dans l'outil, non comptée par ses totaux par entité ; neutralisée par l'ajustement de cutoff 2026-03 / P104 ; décision humaine du 2026-04-01",2026-04-01

@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+uv.lock
+.env
+*.duckdb
+*.sqlite
+*.db
+data/
+sortie/

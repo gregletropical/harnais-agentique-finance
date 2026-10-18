@@ -1,0 +1,6 @@
+id_deal,titre,organisation,statut,valeur,marge,probabilite,debut,fin
+D-501,Refonte boutique phase 2,CLIENT ALPHA,open,30000.00,12000.00,0.60,2026-05-01,2026-10-31
+D-502,Campagne ete,CLIENT BETA,open,15000.00,6000.00,0.50,2026-03-15,2026-06-30
+D-503,Audit SEO,CLIENT GAMMA,lost,8000.00,4000.00,0.00,2026-04-01,2026-05-31
+D-504,Plateforme B2B,CLIENT ALPHA,open,40000.00,16000.00,0.30,2026-09-01,2026-03-31
+D-505,Maintenance annuelle,CLIENT DELTA,won,12000.00,7000.00,1.00,2026-03-01,2026-12-31

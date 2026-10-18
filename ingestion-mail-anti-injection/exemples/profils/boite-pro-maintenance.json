@@ -1,0 +1,9 @@
+{
+  "commentaire": "Profil fictif. Les champs chargeable_par_routine et copie_sur_serveur sont des paramètres d'exemple qui servent à démontrer la règle S4 ; ils ne décrivent aucune installation réelle.",
+  "nom": "boite-pro-maintenance",
+  "fournisseur": "google",
+  "niveau": "maintenance",
+  "scopes": ["gmail.modify", "gmail.labels", "calendar.events", "calendar.readonly", "tasks", "drive.readonly"],
+  "chargeable_par_routine": true,
+  "copie_sur_serveur": true
+}

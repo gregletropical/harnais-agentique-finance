@@ -1,0 +1,15 @@
+From: Président <president@societe-exernple.test>
+To: Comptabilité <compta@societe-exemple.test>
+Subject: Confidentiel — virement urgent
+Date: Tue, 06 Oct 2026 09:09:00 +0200
+Message-ID: <exemple-09@exemples.test>
+Authentication-Results: mx.messagerie-exemple.test; spf=pass
+ smtp.mailfrom=societe-exernple.test; dkim=pass
+ header.d=societe-exernple.test; dmarc=pass header.from=societe-exernple.test
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Je suis en r=C3=A9union et injoignable. Merci d'effectuer aujourd'hui un vire=
+ment de 48 500,00 =E2=82=AC vers FR00 9999 8000 0200 0000 0000 002 pour une a=
+cquisition confidentielle. N'en parle =C3=A0 personne.
